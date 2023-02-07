@@ -29,6 +29,7 @@ header {
     height: auto;
     background-image: linear-gradient(rgba(173, 100, 81, 0.922), rgba(127, 120, 120, 0.3), rgba(0, 0, 0, 0.744)), url("../images/h1_hero.jpg");
 background-position: center;
+background-size: cover;
 }
 
 .container {
@@ -200,11 +201,13 @@ background-position: center;
 
 /* form */
 .form {
-    height: 150px;
+    height: auto;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .check-in,
@@ -213,6 +216,7 @@ background-position: center;
     width: 250px;
     height: 60px;
     padding: 5px;
+    flex-grow: 2;
 }
 
 .form label {
@@ -231,6 +235,7 @@ background-position: center;
     height: 60px;
     border: 1.5px solid white;
     padding: 5px 15px;
+    flex-grow: 1;
 }
 
 .form .search {
@@ -266,47 +271,13 @@ background-position: center;
     border-radius: 50%;
     background-color: rgb(226, 156, 137);
     position: sticky;
-    top: 0px;
     left: 96%;
     top: 90%;
 }
 
 .back-top img {
     position: relative;
-    animation-name: arrows;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes arrows {
-
-0%,
-100%{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-    20%{
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%,0);
-}
-40%{
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%,50%);
-}
-60%{
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-80%{
-    bottom: 30%;
-    left: 50%;
-    transform: translate(-50%,0);
-}
-
+    margin: 4px;
 }
 
 /* about */
@@ -591,7 +562,7 @@ background-position: center;
 /* notes */
 .notes {
     width: 100%;
-    height: 300px;
+    height: auto;
     background-color: rgb(184, 110, 90);
 }
 
@@ -626,13 +597,14 @@ background-position: center;
 /* footer */
 footer {
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: rgb(25, 21, 20);
 }
 
 footer>div {
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
 }
 
@@ -706,7 +678,7 @@ footer .contact a:nth-of-type(2) {
 footer .news input,
 footer .news a {
     display: block;
-    width: 260px;
+    width: 100%;
     height: 50px;
     margin: 10px 0px;
 }
@@ -725,18 +697,232 @@ footer .news a {
     padding: 12px;
 }
 
-footer .container>p {
+footer .container .copyright {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
+    padding: 20px 0px;
 }
+
+footer .container>p {
+    margin: 0px auto;
+}
+
 footer .container>p img {
     width: 16px;
     height: 16px;
 }
 
 
-@media (max-width:989px) {
-    
+
+
+
+@media (max-width:640px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 30px !important;
+    }
+
+    .left-menu,
+    .center-menu,
+    .project .left,
+    .project .right,
+    .about-center,
+    .about-left,
+    .rooms .center div,
+    .our-rooms,
+    .rooms .bottom,
+    .offer>div>div,
+    .note1,
+    .note2,
+    footer>div>div {
+        width: 100%;
+    }
+
+    .social-media,
+    .right-menu,
+    .rooms .click,
+    .about-right,
+    .project .left,
+    .project .right {
+        display: none;
+    }
+
+    .menu,
+    .project,
+    .offer>div,
+    .notes>div,
+    footer>div {
+        display: block;
+    }
+
+    .menu,
+    .project,
+    .offer>div {
+        height: auto;
+    }
+
+
+    .call,
+    .mail {
+        width: 50%;
+
+    }
+
+    .call span,
+    .mail span {
+        font-size: 10px;
+    }
+
+    .left-menu {
+        padding: 10px 0px;
+    }
+
+    .center-menu {
+        height: 50px;
+        background-color: rgb(69, 67, 67);
+        padding: 0;
+
+    }
+
+    .list li {
+        font-size: 12px;
+        padding: 12px 10px;
+        margin: 0px 10px;
+    }
+
+    .list {
+        margin: 0px auto;
+    }
+
+    .form {
+        padding: 5px 20px;
+    }
+
+    .adult,
+    .children,
+    .form .search {
+        width: 250px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .rooms {
+        padding: 50px 5px;
+    }
+
+    .rooms .center div {
+        height: 400px;
+        margin: 10px auto;
+    }
+
+    .rooms .bottom {
+        padding: 0px;
+    }
+
+    .project {
+        padding-bottom: 100px;
+    }
+
+    .video {
+        height: 500px;
+        background-position: center bottom;
+    }
+
+    .offer>div>div {
+        height: 600px;
+        margin: 20px 0px;
+    }
+
+    .note1,
+    .note2 {
+        padding: 20px 10px;
+    }
+
+    footer>div>div {
+        height: 100%;
+        padding: 20px 10px;
+
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+
+
+@media (min-width:641px) and (max-width:1110px) {
+
+    .right-menu,
+    .about-right {
+        display: none;
+    }
+
+    .menu,
+    .about {
+        display: block;
+    }
+
+    .left-menu,
+    .center-menu {
+        width: 100%;
+    }
+
+    .call,
+    .mail {
+        width: 50%;
+
+    }
+
+    .call span,
+    .mail span {
+        font-size: 10px;
+    }
+
+    .left-menu {
+        padding: 10px 0px;
+    }
+
+    .center-menu {
+        height: 50px;
+        background-color: rgb(69, 67, 67);
+        padding: 0;
+
+    }
+
+    .list li {
+        font-size: 12px;
+        padding: 12px 10px;
+        margin: 0px 10px;
+    }
+
+    .list {
+        margin: 0px auto;
+    }
+
+    .project,
+    .about-center,
+    .about-left,
+    .video {
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    .rooms .center div {
+        margin: 10px 10px;
+    }
+
+    .project .right h2 {
+        font-size: 24px;
+    }
+
+    footer .left img {
+        width: 150px
+    }
 }

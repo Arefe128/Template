@@ -201,6 +201,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .check-in,
@@ -265,14 +266,12 @@ header {
     border-radius: 50%;
     background-color: rgb(226, 156, 137);
     position: sticky;
-    top: 0px;
     left: 96%;
     top: 90%;
 }
 
 .back-top img {
     position: relative;
-    animation-name: arrows;
     margin: 4px;
 }
 
